@@ -60,13 +60,14 @@ public class JDBCInstance {
 //        Connection con = JDBCInstance.getConnection();
 //
 //        // tạo query
-//        String query = "Select * from hocsinh";
-//        // tạo ngữ cảnh kết nối
+        String query = "Select * from hocsinh";
+        // tạo ngữ cảnh kết nối
 //        Statement statement = con.createStatement();
-//        // thực thi câu query
+        // thực thi câu query
 //        ResultSet rs = statement.executeQuery(query);
 //        while (rs.next()) {
-//            System.out.println(rs.getString(3));
+//            HocSinh hs2 = new HocSinh();
+//            hs.setTenHocSinh(rs.getString(2));
 //        }
 
 //        getConnection();

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class EntityData<T> implements RepositoryPattern<T> {
     private T table;
-
+private boolean showSql =false;
     @Override
     public void add(T data) throws NoSuchFieldException, IllegalAccessException, SQLException {
         Connection con = JDBCInstance.getConnection();
@@ -23,6 +23,10 @@ public class EntityData<T> implements RepositoryPattern<T> {
         }
         query = query.substring(0, query.length() - 1);
         query += ")";
+        if(showSql){
+            System.out.println(query);
+
+        }
         Statement statement = con.createStatement();
         statement.execute(query);
     }
