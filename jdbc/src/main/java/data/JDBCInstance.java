@@ -3,6 +3,7 @@ package data;
 import model.HocSinh;
 import model.LopHoc;
 
+import javax.swing.*;
 import java.lang.reflect.Field;
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -39,19 +40,20 @@ public class JDBCInstance {
     }
 
     public static void main(String[] args) throws SQLException, NoSuchFieldException, IllegalAccessException {
-        HocSinh hs = new HocSinh();
 
-        hs.setTenHocSinh("Hiền hâm");
-        hs.setNgaySinh(LocalDateTime.now());
-//        Field field =hs.getClass().getDeclaredField("tenHocSinh");
-//        field.setAccessible(true);
-//        System.out.println(field.get(hs));
-
-
-        RepositoryPattern<HocSinh> hocSinhRepo = new EntityData<>();
-//        hocSinhRepo.add(hs);
-        hocSinhRepo.delete(hs,4);
-        RepositoryPattern<LopHoc> lopHocRepo = new EntityData<>();
+        //        HocSinh hs = new HocSinh();
+//
+//        hs.setTenHocSinh("Hiền hâm");
+//        hs.setNgaySinh(LocalDateTime.now());
+////        Field field =hs.getClass().getDeclaredField("tenHocSinh");
+////        field.setAccessible(true);
+////        System.out.println(field.get(hs));
+//
+//
+//        RepositoryPattern<HocSinh> hocSinhRepo = new EntityData<>();
+////        hocSinhRepo.add(hs);
+//        hocSinhRepo.delete(hs,4);
+//        RepositoryPattern<LopHoc> lopHocRepo = new EntityData<>();
         //     lopHocRepo.add(new LopHoc(1,"Lớp của cô Hiền"));
 //        hocSinhRepo.add(hs);
 
@@ -60,7 +62,7 @@ public class JDBCInstance {
 //        Connection con = JDBCInstance.getConnection();
 //
 //        // tạo query
-        String query = "Select * from hocsinh";
+//        String query = "Select * from hocsinh";
         // tạo ngữ cảnh kết nối
 //        Statement statement = con.createStatement();
         // thực thi câu query
